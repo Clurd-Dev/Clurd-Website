@@ -19,11 +19,12 @@
       measurementId: "G-BCD297KC1S"
     };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+
     onMount(async() => {
         const module = await import('bootstrap/dist/js/bootstrap.bundle.js');
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
     });
 </script>
 
