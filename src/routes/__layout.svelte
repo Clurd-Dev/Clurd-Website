@@ -1,6 +1,27 @@
 <script>
     import { onMount } from 'svelte';
     import 'bootstrap/dist/css/bootstrap.min.css';
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCxQqoX554qP5TwLEoG5P680_mpXnapvHE",
+      authDomain: "clurd-c8af6.firebaseapp.com",
+      projectId: "clurd-c8af6",
+      storageBucket: "clurd-c8af6.appspot.com",
+      messagingSenderId: "962202455723",
+      appId: "1:962202455723:web:31732c666d33b827c531ee",
+      measurementId: "G-BCD297KC1S"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
     onMount(async() => {
         const module = await import('bootstrap/dist/js/bootstrap.bundle.js');
     });
