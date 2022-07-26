@@ -15,13 +15,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Getting started</a>
+            <a class="nav-link" href="/getting">Getting started</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Download</a>
+            <a class="nav-link" href="/download">Download</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Source code</a>
+            <a class="nav-link" href="" on:click={() => window.open("https://github.com/Clurd-Dev")}>Source code</a>
           </li>
         </ul>
     
@@ -35,3 +35,14 @@
 
 </slot> 
 </main>
+<br/>
+<br/>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-dark" href="/">Clurd</a>
+    <p>Source code available <a href="https://github.com/Clurd-Dev">here</a></p>
+  </div>
+  <!-- Copyright -->
+</footer>
