@@ -59,7 +59,7 @@ onMount(async() => {
           </a>
           <p>After the setup finished, run Clurd App</p>
           <p>Click on Select executable of Clurd and go to the path where Clurd is installed, should be C:\Program Files (x86)\Clurd\Clurd Server\Clurd\bin\Release\net6.0\publish</p>
-          <p>Now, press on edit config button and write the path where Clurd should gets files</p>
+          <p>Now, press on edit config button and write the path where Clurd should gets files and we can also modify username and password which should be in <a href="http://www.md5.cz/">md5 crypt</a>(the default password is 1234 in md5 crypt)</p>
           <a href="/clurdapp.png" data-toggle="lightbox">
           <img src="/clurdapp.png" alt="App" class="img-fluid"/>
           </a>
@@ -100,7 +100,7 @@ onMount(async() => {
           <p>To configure Clurd, you need to go in the Clurd compiled folder: <a href="#0">cd Clurd.NET/Clurd/Clurd/bin/Release/net6.0/publish</a></p>
           <p>Then you need to edit the configuration file called config.json</p>
           <p>The command is <a href="#0">nano config.json</a></p>
-          <p>Now we can edit the path where Clurd serve and upload files</p>
+          <p>Now we can edit the path where Clurd serve and upload files then we can modify the username and the password, the password must be in <a href="http://www.md5.cz/">md5 crypt</a>. The default password is 1234 with admin user</p>
           <a href="/nanoclurd.png" data-toggle="lightbox">
           <img src="/nanoclurd.png" alt="Edit path with nano" class="img-fluid"/>
           </a>
