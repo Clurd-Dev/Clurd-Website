@@ -1,4 +1,5 @@
-<div class="container text-center">
+<center>
+<div class="container text-center d-flex align-items-center">
     <div class="row">
       <div class="col">
         <div class="card" style="width: 18rem;">
@@ -10,6 +11,9 @@
             </div>
           </div>
       </div>
+      <br/>
+      <br/>
+
       <div class="col">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
@@ -20,6 +24,9 @@
             </div>
           </div>
       </div>
+      <br/>
+      <br/>
+
       <div class="col">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
@@ -35,5 +42,14 @@
 
  <br/>
  <br/>
-
+</center>
   <h4 class="text-center">The Clurd Client for MacOS and iOS is ready to production but we need tester to test and compile the application</h4>
+
+  <style>
+    h4{
+      padding: 10px;
+    }
+    .col{
+      margin-top: 10px;
+    }
+  </style>

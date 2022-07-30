@@ -18,7 +18,7 @@
         
       </div>
       <div class="col-6">
-        <img src="/clurdhome.png" width="800"/>
+        <img src="/clurdhome.png" class="img-fluid"/>
       </div>
     </div>
   </div>

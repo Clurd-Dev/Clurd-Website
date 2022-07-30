@@ -1,33 +1,11 @@
 <script>
-    import { onMount } from 'svelte';
     import 'bootstrap/dist/css/bootstrap.min.css';
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "firebase/app";
-    import { getAnalytics } from "firebase/analytics";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyCxQqoX554qP5TwLEoG5P680_mpXnapvHE",
-      authDomain: "clurd-c8af6.firebaseapp.com",
-      projectId: "clurd-c8af6",
-      storageBucket: "clurd-c8af6.appspot.com",
-      messagingSenderId: "962202455723",
-      appId: "1:962202455723:web:31732c666d33b827c531ee",
-      measurementId: "G-BCD297KC1S"
-    };
-
-
-    onMount(async() => {
-        const module = await import('bootstrap/dist/js/bootstrap.bundle.js');
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    });
 </script>
 
+<svelte:head>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</svelte:head>
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Clurd.NET</a>

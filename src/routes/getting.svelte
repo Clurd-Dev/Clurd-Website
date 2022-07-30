@@ -1,3 +1,10 @@
+<script>
+import { onMount } from 'svelte/internal';
+let Lightbox;
+onMount(async() => {
+  Lightbox = await (await import('bs5-lightbox')).default;
+});
+</script>
 <div class="row">
     <div class="col-2">
       <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
@@ -38,18 +45,24 @@
             <li>choco install dotnet-6.0-runtime</li>
           </ul>
           <p>If all go correct this is the result</p>
-          <img src="/chocoinstall.png" alt="Choco install"/>
+          <a href="/chocoinstall.png" data-toggle="lightbox">
+          <img src="/chocoinstall.png" alt="Choco install" class="img-fluid"/>
+          </a>
           <p>If you don't want to use a packet manager, you can install .NET 6 from this <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">link</a></p>
           <p>You must install .NET Runtime and ASP.NET Core runtime to run Clurd</p>
         </div>
         <div id="item-1-2">
           <h5>Configure and install Clurd</h5>
           <p>Download the last Clurd installer at this <a href="https://github.com/Clurd-Dev/Clurd.NET/releases">link</a>. Click on setup.exe in Github Assets and then run it.</p>
-          <img src="/clurdsetup.png" alt="Setup"/>
+          <a href="/clurdsetup.png" data-toggle="lightbox">
+          <img src="/clurdsetup.png" alt="Setup" class="img-fluid"/>
+          </a>
           <p>After the setup finished, run Clurd App</p>
           <p>Click on Select executable of Clurd and go to the path where Clurd is installed, should be C:\Program Files (x86)\Clurd\Clurd Server\Clurd\bin\Release\net6.0\publish</p>
           <p>Now, press on edit config button and write the path where Clurd should gets files</p>
-          <img src="/clurdapp.png" alt="App"/>
+          <a href="/clurdapp.png" data-toggle="lightbox">
+          <img src="/clurdapp.png" alt="App" class="img-fluid"/>
+          </a>
           <p>Now start server and all the work is done</p>
         </div>
         <div id="item-3">
@@ -76,7 +89,9 @@
           <p>Clurd have a builder script to download and build Clurd on your PC. The installation path of Clurd is the path where you run the script, maybe you should create a folder only for Clurd and his file</p>
           <p>To run the one-line installed do this command: <a href="#0">curl -s https://raw.githubusercontent.com/Clurd-Dev/Clurd.NET/main/Clurd/Clurd/LinuxInstaller/install.sh | sudo bash</a></p>
           <p>If all script run correctly, this is the final output</p>
-          <img src="/linuxdone.png" alt="Linuxdone"/>
+          <a href="/linuxdone.png" data-toggle="lightbox">
+          <img src="/linuxdone.png" alt="Linuxdone" class="img-fluid"/>
+          </a>
           <br/>
           <br/>
         </div>
@@ -86,7 +101,9 @@
           <p>Then you need to edit the configuration file called config.json</p>
           <p>The command is <a href="#0">nano config.json</a></p>
           <p>Now we can edit the path where Clurd serve and upload files</p>
-          <img src="/nanoclurd.png" alt="Edit path with nano" width="1400"/>
+          <a href="/nanoclurd.png" data-toggle="lightbox">
+          <img src="/nanoclurd.png" alt="Edit path with nano" class="img-fluid"/>
+          </a>
           <br/>
           <br/>
           <p>When we finish press CTRL + X and press Y to save the changes</p>
@@ -99,7 +116,9 @@
           <p>Now we need to change some data, so open an editor on init.d script: <a href="#0">nano /etc/init.d/Clurd</a></p>
           <p>We change USER with our user and PATHTOCLURD with the path to Clurd executable</p>
           <p>The final file should be similar to this</p>
-          <img src="/initcomplete.png" alt="Complete init.d script"/>
+          <a href="/initcomplete.png" data-toggle="lightbox">
+            <img src="/initcomplete.png" alt="Complete init.d script" class="img-fluid"/>
+          </a>
           <br/>
           <br/>
           <p>To try this script start Clurd: <a href="#0">/etc/init.d/Clurd start</a></p>
@@ -108,3 +127,12 @@
       </div>
     </div>
   </div>
+
+  <style>
+    img{
+      padding: 10px;
+    }
+    div{
+      padding: 10px;
+    }
+  </style>
